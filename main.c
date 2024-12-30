@@ -3,13 +3,24 @@
 
 #define FRAME_COUNT 7
 
+typedef struct Frame {
+    char *path;
+    float duration;
+} Frame;
+
+const Frame fs[] = {
+    { .path = "Cheese", .duration = 0.2f },
+    { .path = "Cheese", .duration = 0.2f },
+    { .path = "Cheese", .duration = 0.2f },
+};
+
 int main(void)
 {
     const int screenWidth = 540;
     const int screenHeight = 540;
 
     const float scale = 6.0f;
-    
+
     InitWindow(screenWidth, screenHeight, "Nezumi");
 
     // Load the frames.
